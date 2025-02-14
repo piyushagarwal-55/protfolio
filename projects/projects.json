@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Hostel Complain System",
+    "desc": "Developed a full-stack web application where students can register complaints and wardens can manage those complaints.",
+    "image": "hostelproject",
+    "category": "mern",
+    "links": {
+      "view": "https://hostel-management-advanced.onrender.com/",
+      "code": "https://github.com/piyushagarwal-55/lnmiit-hostel-complain-app"
+    }
+  },
+  {
+    "name": "Agarwal Store",
+    "desc": "Developed a responsive e-commerce website for Agarwal Store using HTML, CSS, and JavaScript.",
+    "image": "agarwalstore",
+    "category": "basicweb",
+    "links": {
+      "view": "https://piyushecommerceweb.netlify.app/",
+      "code": "https://github.com/piyushagarwal-55/ecommerce_project"
+    }
+  },
+  {
+    "name": "Huddle Project",
+    "desc": "Huddle re-imagines the way we build communities.",
+    "image": "huddle",
+    "category": "basicweb",
+    "links": {
+      "view": "https://piyush-huddle.netlify.app/",
+      "code": "https://github.com/piyushagarwal-55/Huddle-Project"
+    }
+  }
+  
+  
+]
