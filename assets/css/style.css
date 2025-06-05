@@ -330,16 +330,21 @@ header .navbar ul li a:hover {
   --black-color: #000000; /* Default black */
   --white-color: #ffffff; /* Default white */
   --gradientcolor:linear-gradient(to bottom, #000031, #00002c);
+  --projectcolor : #f1e7e7;
+  --abilitycolor:#000;
 }
 
 [data-theme="dark"] {
   --background-color: #000;
   --text-color: #ffffff;
   --navbar-bg-color: #1e1e1e;
+  --projectcolor: #1e1e1e;
   --navbar-text-color: #ffffff;
   --black-color: #ffffff; /* Black becomes white in dark mode */
   --white-color: #000000; /* White becomes black in dark mode */
   --gradientcolor:#000000;
+  --abilitycolor:yellow;
+
 }
 
 body {
@@ -541,16 +546,16 @@ svg path[fill="white"] {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: var(--gradientcolor);
+  background : var(--white-color);
 }
 .skills h2 {
-  color: #fff;
+  color: var(--black-color);
 }
 .skills .heading span {
-  color: rgb(255, 230, 0);
+  /* color: rgb(255, 230, 0); */
 }
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
+  /* background: rgba(0, 0, 22, 0.4); */
   color: #fff;
   border-radius: 1rem;
   padding: 2rem;
@@ -615,7 +620,7 @@ svg path[fill="white"] {
 /* education section starts */
 .education {
   background: var(--white-color);
-  min-height: 80vh;
+  min-height: 30vh;
 }
 .education .qoute {
   font-size: 1.5rem;
@@ -722,10 +727,10 @@ svg path[fill="white"] {
 /* work section starts */
 .work {
   /* background: #010124; */
-  background: var(--gradientcolor);
+  /* background: var(--gradientcolor); */
 }
 .work h2 {
-  color: #fff;
+  color: var(--black-color);
   padding: 1rem;
 }
 .work .heading span {

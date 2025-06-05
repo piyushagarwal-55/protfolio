@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Piyush Agarwal, portfolio, Piyush, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Piyush's Portfolio. Full-Stack Web Developer and Android App Developer" />
-    <!-- Custom CSS -->
+  
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
+   
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Piyush Agarwal</title>
 </head>
@@ -81,17 +81,260 @@
   }
 
   @media (max-width: 600px) {
+      
       .py-detail-box {
           flex: 1 1 100%;
       }
   }
 </style>
-<!-- navbar starts -->
+<style>
+ 
+  h1 {
+      color: #00aaff;
+  }
+  .pg-projects-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+  }
+  .pg-project-card {
+      background-color: var(--projectcolor);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid;
+      border-color: rgba(0, 0, 0, 0.7);
+      width: 300px;
+      box-shadow: 0 4px 10px var(--white-color);
+      transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .pg-project-card img {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      border-color: black;
+  }
+  .pg-project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  .pg-project-title {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #00aaff;
+  }
+  .pg-project-description {
+     height: 9rem;
+      font-size: 14px;
+      margin: 10px 0;
+      
+      color: var(--black-color);
+  }
+  .pg-github-button {
+      display: inline-block;
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      
+  }
+  .pg-github-button:hover {
+    transform: scale(1.05);
+    border: 1px solid;
+      border-color: rgba(0, 0, 0, 0.7);
+      background-color: #0088cc;
+  }
+  .work{
+    min-height: 85vh;
+    background-color: var(--white-color);
+  }
+  .experience{
+    min-height: 65vh;
+  }
+  .ab-container {
+            max-width: 600px;
+            margin-top: 3vh;
+        }
+        .ab-text {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .ab-text img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .sk-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding:20px;
+            gap: 10px; /* Reduced gap to make rows closer */
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .sk-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #8ab4f8;
+        }
+        .sk-hex {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #1a1a2e, #16162c);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+           
+        }
+        .sk-hex:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, #24243e, #1a1a2e);
+        }
+        .sk-hex img {
+            width: 60px;
+            height: 60px;
+        }
+        .graphql{
+          display: none;
+        }
+        @media (max-width: 600px){
+          .graphql{
+            display: inline-block;
+          }
+          .sk-hex {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #1a1a2e, #16162c);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+           
+        }
+        .sk-hex:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, #24243e, #1a1a2e);
+        }
+        .sk-hex img {
+            width: 60px;
+            height: 60px;
+        }
+        }
+        .education-container {
+            background: var(--white-color);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .education-item {
+            display: flex;
+            flex-direction: column;
+            /* border-bottom: 1px solid #ddd; */
+            padding: 10px 0;
+            /* height: 25vh; */
+        }
+        .education-item:last-child {
+            border-bottom: none;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            justify-content: space-between;
+            height: 100px;
+        }
+        .arrow {
+            width: 20px;
+            height: 20px;
+            background: blue;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black-color);
+            margin-right: 10px;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+        .edu-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size:16px;
+        }
+        .open .details {
+            display: block;
+        }
+        .open .arrow {
+            transform: rotate(90deg);
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            color: var(--black-color);
+            font-size: 13px;
+            margin-left: 25px;
+        }
+        .edu-info{
+          color: var(--text-color);
+        }
+        .class12{
+            /* height: 23vh; */
+          }
+        @media (max-width: 600px){
+          
+          .education-item{
+            
+            /* height: 40vh; */
+          }
+          .details{
+            margin-left: 20px;
+            margin-top: 50px;
+          }
+          
+          .education-item{
+            /* height: 30vh; */
+          }
+          .class12{
+            /* height: 20vh; */
+            margin-top: 40px;
+          }
+          .about .row .image {
+        margin-top: 0rem;
+    }
+    .education{
+      padding: 0px;
+    }
+
+     .aboutschool{ 
+      margin-top: -40px;
+     } 
+        }
+</style>
+
 <header>
   <a href="/" class="logo"><i class="fab fa-node-js"></i> Piyush</a>
   <li class="nav-item">
     <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggleLightMode()">
-    <label for="dark_toggler" class="toggle-label"></label>
+    <label for="dark_toggler" class="toggle-label" ></label>
 </li>
   <div id="menu" class="fas fa-bars"></div>
   <nav class="navbar">
@@ -100,22 +343,19 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#work">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
           
          
       </ul>
   </nav>
 </header>
-<!-- navbar ends -->
 
-
-<!-- hero section starts -->
 <section class="home" id="home">
     <div id="particles-js"></div>
 
     <div class="content">
-    <h2 style="color:chocolate;">Hi There,<br/> I'm Piyush <span>Agarwal</span></h2>
+    <h2 style="color: orange;">Hi There,<br/> <span style="color:var(--black-color);">I'm</span> <span> Piyush Agarwal</span></h2>
     <p>i am into <span class="typing-text"></span></p>
     <a href="#about" class="btn"><span>About Me</span>
       <i class="fas fa-arrow-circle-down"></i>
@@ -125,9 +365,14 @@
           <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/piyush-agarwal-284988332/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/piyushagarwal-55" target="_blank"><i class="fab fa-github"></i></a></li>
           <li><a class="twitter" aria-label="Twitter" href="https://x.com/piyushagarwal_5" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <!-- <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li> -->
+         
           <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/piyushagarwal_55?igsh=YndhcmtydGlsNHJr"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          <!-- <li><a class="dev" aria-label="Dev" href="https://dev.to/piyushagarwal" target="_blank"><i class="fab fa-dev"></i></a></li> -->
+          <li>
+            <a class="dev" aria-label="Dev" href="https://codeforces.com/profile/piyushagarwal_5" target="_blank">
+                <img src="https://codeforces.org/s/93046/favicon-16x16.png" alt="Codeforces Icon">
+            </a>
+        </li>
+        
         </ul>
       </div>
     </div>
@@ -135,40 +380,54 @@
     <img draggable="false" class="tilt" src="./assets/images/originialherosection.png" alt="">
 </div>
 </section>
-<!-- hero section ends -->
 
-
-<!-- about section starts -->
 <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
     
-    <div class="row">
+    <div class="row" style="flex-direction: row-reverse;">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+        <img draggable="false" class="tilt myimage" src="./assets/images/profilephoto.jpg" alt="" style="margin-top: 5vh;">
     </div>
-    <div class="content">
-        <h3>I'm Piyush Agarwal</h3>
-        <span class="tag">Full Stack Developer</span>
+    <div class="content" >
+        <h3 style="color: orange;">I'm Piyush Agarwal</h3>
         
-        <p>I am a Full-Stack developer. 
-          I am currently a first year student pursuing B-Tech from The LNM Institute of Information Technology.
-          I am very passionate about improving my coding skills & developing applications & websites.
-          I build Websites using MERN Stack.
-          I also love to do competitve Programing.Currently I am specialist on codeforces.
-          Working for myself to improve my skills.
-          Love to build Full-Stack clones. </p>
         
+        <div class="ab-container">
          
+          <p class="ab-text">
+            <span style="margin-top: 0px; margin-right: 10px;">👨‍💻</span> I'm a Full Stack Web Developer...</p>
+
+          <p class="ab-text">
+            <span style="margin-top: -40px; margin-right: 10px;">🎓</span>
+              Currently working toward my 
+              B-Tech in Computer Science and Communication Engineering course at The LNM Institute of Information and Technology , I'm all about building reliable, scalable software that makes a difference.
+          </p>
+          <p class="ab-text">
+            <span style="margin-top: -20px; margin-right: 10px;">🛠
+            </span>
+            I build Websites using MERN Stack. Love to build Full-Stack Websites.
+          </p>
+          <p class="ab-text">
+            <span style="margin-top:-25px; margin-right: 10px;">🔧
+            </span>
+            I also love to do competitve Programing.
+          </p>
+          <p class="ab-text">
+            <span style="margin-top: 0px; margin-right: 10px;">💡
+            </span>
+              I'm always curious and constantly learning.
+          </p>
+      </div>
         
         <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1dKzBX9Z0nZnCDn6LOZBhX6cd7PA8BWAa/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
+            <a href="https://drive.google.com/file/d/1KfjttLshGpnRZ-xiRcVZ5Ka2o1EYofhp/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
 
         <div class="py-container">
-          <h2 class="py-title">Personal Details</h2>
+          <h2 class="py-title" style="padding: 15px;">Personal Details</h2>
           <div class="py-details">
               <div class="py-detail-box">
                   <span>Date Of Birth:</span><br>
@@ -191,90 +450,108 @@
     </div>
     </div>
 </section>
-<!-- about section ends -->
 
-<!-- skills section starts -->
-<section class="skills" id="skills">
+<section class="skills" id="skills" style="display: flex; flex-direction: column;">
 
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span style="color: var(abilitycolor);">Abilities</span></h2>
 
-    <div class="container">
-          <div class="row" id="skillsContainer">
-
-            <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-
-                
-                <span>AdobeXD</span>
-              </div>
-            </div> -->
-
-      </div>
+   
+<h2 class="sk-title" style="margin-top: 50px;">&lt;programming&gt;</h2>
+<div class="sk-container">
+    
+       <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"></div>
+    <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+    <div class="sk-hex"><img src="https://img.icons8.com/fluency/48/000000/node-js.png" alt="Express"></div>
+    <div class="sk-hex"><img src="https://img.icons8.com/color/48/000000/redux.png" alt="Redux"></div>
+    <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS"></div>
+    <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+    <div class="sk-hex SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></div>
+    <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></div>
+    <div class="sk-hex graphql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL"></div>
+    <div class="sk-hex"><img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="NodeJs"></div>
+    <div class="sk-hex"><img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub"></div>
+    <div class="sk-hex"><img src="https://img.icons8.com/?size=60&id=shQTXiDQiQVR&format=png&color=000000" alt="C"></div>
+    <div class="sk-hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+    <div class="sk-hex html5"><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML5"></div>
 </div>
+<h2 class="sk-title"  style="margin-bottom: 50px; margin-top: 20px; text-align:  right;">&lt;/programming&gt;</h2>
+
 </section>
-<!-- skills section ends -->
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-
+ <section class="education" id = "education">
   <h1 class="heading" ><i class="fas fa-graduation-cap" ></i> My <span>Education</span></h1>
 
     <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
 
-    <div class="box-container">
-
-    <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/college.png" alt="">
+    <div class="education-container"">
+     
+      <div class="education-item lnmiit"  >
+          <div class="title-container" onclick="toggleDetails(this)" >
+              <div class="arrow">▶</div>
+              <div class="edu-info" style="gap: 80px;">
+                  <span><strong style="word-spacing: 5px; letter-spacing: 1.5px;">B-Tech In  Computer Science and Communication Engineering<br/><span style="color: green;">(Currently Enrolled)</span> </strong></span>
+      
+                  <div>
+                      <p style="text-align:  right;word-spacing: 5px; letter-spacing: 1.5px;">2024-2028 </p>
+                      <p style="text-align:  right;word-spacing: 5px; letter-spacing: 1.5px;">The  LNM  Institute  of Information  and Technology</p>
+                  </div>
+              </div>
+          </div>
+          <div class="details" >
+              <p>The LNMIIT is known to be an institution of higher learning that celebrates merit, diversity and equality. It was founded in the late 2002 as a joint venture in the private-public-partnership mode as a collaboration between the Government of Rajasthan and the Lakshmi and Usha Mittal Foundation of the well-known industrialist and philanthropist Mr. Lakshmi Niwas Mittal.<br/></p>
+          </div>
+      </div>
+ 
+      <div class="education-item class12">
+        <div class="title-container" onclick="toggleDetails(this)">
+            <div class="arrow">▶</div>
+            <div class="edu-info" class="edu-info" style="gap: 70px;">
+                <span><strong style="word-spacing: 5px; letter-spacing: 1.5px;">Secondary School Graduate<br/><span style="color: green;">(Completed)</span></strong></span>
+                <div>
+                    <p style="text-align:  right;word-spacing: 5px; letter-spacing: 1.5px;">2022-2023 </p>
+                    <p style="text-align:  right;word-spacing: 5px; letter-spacing: 1.5px;">ST. Mary's School</p>
+                </div>
+            </div>
         </div>
-        <div class="content">
-        <h3>BTech in Computer Science and Communication Engineering course</h3>
-        <p>The LNM Institute of Information Technology</p>
-        <h4>2024-2028 | Pursuing</h4>
+        <div class="details">
+            <p class="aboutschool">St. Mary's School is an English Medium Co-educational School which builds character through education. It is under the management of St. Mary's Educational Society which is registered under the Societies Registration Act XXI of 1860.</p>
         </div>
     </div>
+  </div>
 
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/school.png" alt="">
-      </div>
-      <div class="content">
-      <h3>Secondary School Graduate</h3>
-      <p>St Mary's School | CBSE</p>
-      <h4>2022-2023 | Completed</h4>
-      </div>
-    </div>
-
-</div>
+  <script>
+      function toggleDetails(element) {
+          let parent = element.parentElement;
+          parent.classList.toggle("open");
+      }
+  </script>
 </section>
-<!-- education section ends -->
 
-
-<!-- work project section starts -->
 <section class="work" id="work">
 
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
-  <div class="box-container">
-
-    <!-- <div class="box ">
-      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/piyush-agarwal/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+  <div class="pg-projects-container">
+    <div class="pg-project-card" >
+        <img src="assets/images/projects/agarwalstore.png" alt="E-Commerce Project">
+        <div class="pg-project-title">E-Commerce Project</div>
+        <p class="pg-project-description">Developed a responsive e-commerce website for Agarwal Store using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/piyushagarwal-55/ecommerce_project" class="pg-github-button" target="_blank">View on GitHub</a>
+        <a href= "https://piyushecommerceweb.netlify.app/" class="pg-github-button" style="margin-left: 40px;" target="_blank">View Now</a>
+    </div>
+    <div class="pg-project-card">
+        <img src="assets/images/projects/hostelproject.png" alt="Hostel Complain Project">
+        <div class="pg-project-title">Hostel Complain Project</div>
+        <p class="pg-project-description">Developed a full-stack web application where students can register complaints and wardens can manage those complaints.</p>
+        <a href= "https://github.com/piyushagarwal-55/lnmiit-hostel-complain-app" class="pg-github-button" target="_blank">View on GitHub</a>
+        <a href= "https://hostel-management-advanced.onrender.com/" class="pg-github-button" style="margin-left: 40px;" target="_blank">View Now</a>
+    </div>
+    <div class="pg-project-card">
+        <img src="assets/images/projects/huddle.png" alt="Hudlle Project">
+        <div class="pg-project-title">Huddle Project</div>
+        <p class="pg-project-description">Huddle re-imagines the way we build communities. Create connections with your users as you engage in genuine discussion.</p>
+        <a href="https://github.com/piyushagarwal-55/Huddle-Project" class="pg-github-button" target="_blank">View on GitHub</a>
+        <a href= "https://piyush-huddle.netlify.app/" class="pg-github-button" style="margin-left: 40px;" target="_blank">View Now</a>
+    </div>
 </div>
 
 <!-- <div class="viewall">
@@ -284,9 +561,7 @@
 </div> -->
 
 </section>
-<!-- work project section ends -->
 
-<!-- experience section starts -->
 <section class="experience" id="experience">
 
   <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
@@ -300,7 +575,6 @@
         </div>
         <div class="desc">
             <h3>Full Stack Developer</h3>
-            <p>Jan 2025 - present</p>
         </div>
       </div>
     </div>
@@ -312,8 +586,7 @@
           <h2>Competitve Programmer</h2>
         </div>
         <div class="desc">
-            <h3>Specialist On Codeforces(Rating : 1422)</h3>
-            <p>Oct 2024 - Presently</p>
+            <h3> On Codeforces(Rating : 936)</h3>
         </div>
       </div>
     </div>
@@ -321,11 +594,10 @@
     <div class="container right">
       <div class="content">
         <div class="tag">
-          <h2>Torque Event</h2>
+          <h2>Member</h2>
         </div>
         <div class="desc">
-            <h3>Participant of Torque 4.0</h3>
-            <p>Nov 2024</p>
+            <h3>Member of Cipher Club</h3>
         </div>
       </div>
     </div>
@@ -336,7 +608,7 @@
 </div>
 
 </section>
-<!-- experience section ends -->
+
 <section class="contact" id="contact">  
 
   <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>  
@@ -379,19 +651,16 @@
 
 <script>  
   document.getElementById('contact-form').addEventListener('submit', function(event) {  
-    event.preventDefault(); // Prevent the default form submission  
+    event.preventDefault(); 
     
-    // Clear all input fields and textarea  
+
     this.reset();  
     
-    // Show alert message  
+
     alert('Application submitted successfully');  
   });  
 </script>
-<!-- contact section ends -->
 
-
-<!-- footer section starts -->
 <section class="footer">
 
   <div class="box-container">
@@ -422,45 +691,34 @@
               <a href="https://github.com/piyushagarwal-55" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
               <a href="mailto:piyushaga2005@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
               <a href="https://x.com/piyushagarwal_5" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
-              <!-- <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a> -->
+           
           </div>
       </div>
   </div>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/piyush-agarwal"> Piyush Agarwal</a></h1>
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/piyush-agarwal-284988332/"> Piyush Agarwal</a></h1>
 
 </section>
-<!-- footer section ends -->
 
-
-<!-- scroll top btn -->
 <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
 
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- typed.js cdn -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- particle.js links -->
-<!-- <script src="./assets/js/particles.min.js"></script> -->
+
 <script src="./assets/js/app.js"></script>
 
-<!-- vanilla tilt.js links -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
 
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
 
